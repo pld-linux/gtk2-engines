@@ -6,7 +6,7 @@ Release:	8
 Epoch:		1
 License:	GPL
 Group:		Themes/Gtk
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/1.9/gtk-engines-%{version}.tar.bz2
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gtk-engines/1.9/gtk-engines-%{version}.tar.bz2
 URL:		http://gtk.themes.org/
 Requires:	gtk+2 >= 2.2
 BuildRequires:	autoconf
