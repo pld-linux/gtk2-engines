@@ -25,7 +25,7 @@ These are the graphical engines for the various GTK+ toolkit themes.
 Pakiet ten zawiera modu³y ró¿nych tematów do biblioteki Gtk+.
 
 %prep
-%setup -q
+%setup -q -n gtk-engines-%{version}
 
 %build
 libtoolize --copy --force
