@@ -2,7 +2,7 @@ Summary:	Default GTK+2 theme engines
 Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
 Version:	2.6.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
@@ -14,8 +14,11 @@ BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Provides:	gtk2-theme-engine-Industrial
 Requires:	gtk+2 >= 2:2.6.0
+Provides:	gnome-themes-LighthouseBlue
+Provides:	gnome-themes-ThinIce
+Provides:	gtk2-theme-engine-Industrial
+Provides:	gtk2-theme-engine-Smooth
 Obsoletes:	gnome-themes-LighthouseBlue
 Obsoletes:	gnome-themes-ThinIce
 Obsoletes:	gtk-engines = 1.9.0
