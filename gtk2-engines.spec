@@ -9,11 +9,11 @@ Group:		Themes/Gtk
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.2/gtk-engines-%{version}.tar.bz2
 # Source0-md5: 78e9276c28b509f3203de4873c20a263
 URL:		http://gtk.themes.org/
-Requires:	gtk+2 >= 2.2
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	gtk+2-devel >= 2.2
+BuildRequires:	libtool
+Requires:	gtk+2 >= 2.2
 Obsoletes:	gtk-engines = 1.9.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
