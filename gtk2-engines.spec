@@ -2,16 +2,17 @@ Summary:	Default GTK+2 theme engines
 Summary(pl):	Tematy do GTK+2
 Name:		gtk2-engines
 Version:	1.9.0
-Release:	7
+Release:	8
 Epoch:		1
 License:	GPL
 Group:		Themes/Gtk
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/1.9/gtk-engines-%{version}.tar.bz2
 URL:		http://gtk.themes.org/
+Requires:	gtk+2 >= 2.2
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	gtk+2-devel >= 2.1.5
+BuildRequires:	gtk+2-devel >= 2.2
 Obsoletes:	gtk-engines = 1.9.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
