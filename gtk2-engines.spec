@@ -2,7 +2,7 @@ Summary:	Default GTK+2 theme engines
 Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
 Version:	2.2.0
-Release:	5
+Release:	6
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
@@ -14,7 +14,7 @@ BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	gtk+2 >= 2.2
+Requires:	gtk+2 >= 2:2.6.0
 Obsoletes:	gtk-engines = 1.9.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,6 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %dir %{_libdir}/gtk-2.0/*/engines
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
+%exclude %{_libdir}/gtk-2.0/*/engines/libpixmap.so
 %{_pkgconfigdir}/*
 %{_datadir}/themes/Metal/*
 %{_datadir}/themes/Redmond95
