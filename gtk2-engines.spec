@@ -1,21 +1,26 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.2.0
-Release:	6
+Version:	2.6.0
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.2/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	78e9276c28b509f3203de4873c20a263
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.6/gtk-engines-%{version}.tar.bz2
+# Source0-md5:	396a4bead002c95e588b38af13232627
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2:2.2
+BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Provides:	gtk2-theme-engine-Industrial
 Requires:	gtk+2 >= 2:2.6.0
+Obsoletes:	gnome-themes-LighthouseBlue
+Obsoletes:	gnome-themes-ThinIce
 Obsoletes:	gtk-engines = 1.9.0
+Obsoletes:	gtk2-theme-engine-Industrial
+Obsoletes:	gtk2-theme-engine-Smooth
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,12 +52,22 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/*/engines/*.la
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+umask 022
+%{_bindir}/gdk-pixbuf-query-loaders >%{_sysconfdir}/gtk-2.0/gdk-pixbuf.loaders
+exit 0
+
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %dir %{_libdir}/gtk-2.0/*/engines
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
-%exclude %{_libdir}/gtk-2.0/*/engines/libpixmap.so
 %{_pkgconfigdir}/*
+%{_datadir}/eazel-engine
+%{_datadir}/themes/Crux
+%{_datadir}/themes/Industrial
+%{_datadir}/themes/LighthouseBlue
 %{_datadir}/themes/Metal/*
-%{_datadir}/themes/Redmond95
+%{_datadir}/themes/Mist
+%{_datadir}/themes/Redmond
+%{_datadir}/themes/ThinIce/*
