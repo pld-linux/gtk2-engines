@@ -1,5 +1,5 @@
 Summary:	Default GTK+2 theme engines
-Summary(pl):	Tematy do GTK+2
+Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
 Version:	2.2.0
 Release:	1
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 These are the graphical engines for the various GTK+ toolkit themes.
 
 %description -l pl
-Pakiet ten zawiera modu³y ró¿nych tematów do biblioteki Gtk+.
+Pakiet ten zawiera modu³y ró¿nych motywów do biblioteki Gtk+.
 
 %prep
 %setup -q -n gtk-engines-%{version}
