@@ -38,6 +38,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+# .la are not needed (according to spec included to package)
+rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.2.*/engines/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -45,7 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %dir %{_libdir}/gtk-2.0/2.2.*/engines
-%{_libdir}/gtk-2.0/2.2.*/engines/*.la
 %attr(755,root,root) %{_libdir}/gtk-2.0/2.2.*/engines/*.so
 %{_pkgconfigdir}/*
 %{_datadir}/themes/Metal
