@@ -1,20 +1,20 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.6.0
-Release:	3
+Version:	2.6.1
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.6/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	396a4bead002c95e588b38af13232627
+# Source0-md5:	87849bc511cdba018c87fe5d6f7ba347
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2:2.6.0
+BuildRequires:	gtk+2-devel >= 2:2.6.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	gtk+2 >= 2:2.6.0
+Requires:	gtk+2 >= 2:2.6.2
 Provides:	gnome-themes-LighthouseBlue
 Provides:	gnome-themes-ThinIce
 Provides:	gtk2-theme-engine-Industrial
@@ -70,7 +70,6 @@ exit 0
 %dir %{_libdir}/gtk-2.0/*/engines
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
 %{_pkgconfigdir}/*
-%{_datadir}/eazel-engine
 %{_datadir}/themes/Crux
 %{_datadir}/themes/Industrial
 %{_datadir}/themes/LighthouseBlue
