@@ -11,7 +11,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.2/gtk-engines-%{ve
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.2
+BuildRequires:	gtk+2-devel >= 2:2.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	gtk+2 >= 2.2
