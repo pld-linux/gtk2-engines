@@ -1,12 +1,12 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl):	Tematy do GTK+2
 Name:		gtk2-engines
-Version:	1.9.0
-Release:	8
+Version:	2.2.0
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Themes/Gtk
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gtk-engines/1.9/gtk-engines-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.2/gtk-engines-%{version}.tar.bz2
 URL:		http://gtk.themes.org/
 Requires:	gtk+2 >= 2.2
 BuildRequires:	autoconf
@@ -47,6 +47,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/gtk-2.0/2.2.*/engines
 %{_libdir}/gtk-2.0/2.2.*/engines/*.la
 %attr(755,root,root) %{_libdir}/gtk-2.0/2.2.*/engines/*.so
-
+%{_pkgconfigdir}/*
 %{_datadir}/themes/Metal
 %{_datadir}/themes/Redmond95
