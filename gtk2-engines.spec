@@ -26,8 +26,8 @@ Pakiet ten zawiera modu³y ró¿nych motywów do biblioteki Gtk+.
 %setup -q -n gtk-engines-%{version}
 
 %build
-libtoolize --copy --force
-aclocal
+%{__libtoolize}
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
