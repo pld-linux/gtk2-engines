@@ -1,13 +1,14 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.6.2
+Version:	2.6.3
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.6/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	11f9a1dcabf002aa904facac4293c1fd
+# Source0-md5:	ba5975f8ab390fa43fc0bf94f4a3b023
+Patch0:		%{name}-makefile.patch
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,8 +16,10 @@ BuildRequires:	gtk+2-devel >= 2:2.6.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	gtk+2 >= 2:2.6.2
+Provides:	gnome-themes-Clearlooks
 Provides:	gnome-themes-LighthouseBlue
 Provides:	gnome-themes-ThinIce
+Provides:	gtk2-theme-engine-Clearlooks
 Provides:	gtk2-theme-engine-Industrial
 Provides:	gtk2-theme-engine-Smooth
 Provides:	gtk2-theme-engine-ThinIce
@@ -38,6 +41,7 @@ Pakiet ten zawiera modu³y ró¿nych motywów do biblioteki Gtk+.
 
 %prep
 %setup -q -n gtk-engines-%{version}
+%patch -p1
 
 %build
 %{__libtoolize}
@@ -70,6 +74,7 @@ exit 0
 %dir %{_libdir}/gtk-2.0/*/engines
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
 %{_pkgconfigdir}/*
+%{_datadir}/themes/Clearlooks
 %{_datadir}/themes/Crux
 %{_datadir}/themes/Industrial
 %{_datadir}/themes/LighthouseBlue
