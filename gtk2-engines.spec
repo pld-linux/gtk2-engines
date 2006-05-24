@@ -69,14 +69,14 @@ exit 0
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
+%dir %{_datadir}/themes/Redmond
 %{_datadir}/themes/Clearlooks
 %{_datadir}/themes/Crux
-%{_datadir}/themes/Industrial/*
+%{_datadir}/themes/Industrial
 %{_datadir}/themes/LighthouseBlue
-%{_datadir}/themes/Metal/*
+%{_datadir}/themes/Metal
 %{_datadir}/themes/Mist
-%{_datadir}/themes/Redmond
-%{_datadir}/themes/ThinIce/*
-%dir %{_libdir}/gtk-2.0/*/engines
+%{_datadir}/themes/Redmond/gtk-2.0
+%{_datadir}/themes/ThinIce
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
 %{_pkgconfigdir}/*
