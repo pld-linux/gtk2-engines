@@ -7,7 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.6/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	da44fa2cbb89da5abcb40e845e74bc76
+# Source0-md5:	77fb084b60efa8dd4fcfc0fc24882cd1
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
