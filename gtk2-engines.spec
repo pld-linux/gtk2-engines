@@ -1,20 +1,20 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.6.9
-Release:	1
+Version:	2.7.4
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.6/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	77fb084b60efa8dd4fcfc0fc24882cd1
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.7/gtk-engines-%{version}.tar.bz2
+# Source0-md5:	b0f27c0f6d5f610ca445a3d82d5779da
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2:2.8.18
+BuildRequires:	gtk+2-devel >= 2:2.9.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	gtk+2 >= 2:2.8.18
+Requires:	gtk+2 >= 2:2.9.2
 Provides:	gnome-themes-Clearlooks
 Provides:	gnome-themes-LighthouseBlue
 Provides:	gnome-themes-ThinIce
@@ -36,7 +36,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 These are the graphical engines for the various GTK+ toolkit themes.
 
 %description -l pl
-Pakiet ten zawiera modu³y ró¿nych motywów do biblioteki Gtk+.
+Pakiet ten zawiera modu³y ró¿nych motywów do biblioteki GTK+.
 
 %prep
 %setup -q -n gtk-engines-%{version}
@@ -69,14 +69,14 @@ exit 0
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
+%dir %{_datadir}/themes/Redmond
 %{_datadir}/themes/Clearlooks
 %{_datadir}/themes/Crux
-%{_datadir}/themes/Industrial/*
+%{_datadir}/themes/Industrial
 %{_datadir}/themes/LighthouseBlue
-%{_datadir}/themes/Metal/*
+%{_datadir}/themes/Metal
 %{_datadir}/themes/Mist
-%{_datadir}/themes/Redmond
-%{_datadir}/themes/ThinIce/*
-%dir %{_libdir}/gtk-2.0/*/engines
+%{_datadir}/themes/Redmond/gtk-2.0
+%{_datadir}/themes/ThinIce
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
 %{_pkgconfigdir}/*
