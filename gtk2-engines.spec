@@ -1,5 +1,5 @@
 Summary:	Default GTK+2 theme engines
-Summary(pl.UTF-8):   Motywy do GTK+2
+Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
 Version:	2.8.2
 Release:	1
