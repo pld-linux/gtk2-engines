@@ -1,20 +1,20 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.8.2
+Version:	2.10.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Themes/GTK+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.8/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	0c5b0254b57910b1ebcda47ac6a3b1ba
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.10/gtk-engines-%{version}.tar.bz2
+# Source0-md5:	245d0939025f8f9856c2309071cf075e
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2:2.10.6
+BuildRequires:	gtk+2-devel >= 2:2.10.10
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	gtk+2 >= 2:2.10.6
+Requires:	gtk+2 >= 2:2.10.10
 Provides:	gnome-themes-Clearlooks
 Provides:	gnome-themes-ThinIce
 Provides:	gtk2-theme-engine-Clearlooks
@@ -57,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 # .la are not needed (according to spec included to package)
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/*/engines/*.la
 
+%find_lang gtk-engines
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -65,9 +67,11 @@ umask 022
 %{_bindir}/gdk-pixbuf-query-loaders >%{_sysconfdir}/gtk-2.0/gdk-pixbuf.loaders
 exit 0
 
-%files
+%files -f gtk-engines.lang
 %defattr(644,root,root,755)
 %doc ChangeLog README
+%dir %{_datadir}/gtk-engines
+%{_datadir}/gtk-engines/*.xml
 %dir %{_datadir}/themes/Redmond
 %{_datadir}/themes/Clearlooks
 %{_datadir}/themes/Crux
