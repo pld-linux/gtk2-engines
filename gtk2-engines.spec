@@ -1,20 +1,22 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.12.2
+Version:	2.14.0
 Release:	1
 Epoch:		1
-License:	GPL
+License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.12/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	a73506d8262eb52e0e4bd8e04517ea4e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.14/gtk-engines-%{version}.tar.bz2
+# Source0-md5:	c4784ceacddbf818c22ce36b13f6c7a1
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2:2.12.0
+BuildRequires:	gettext-devel
+BuildRequires:	gtk+2-devel >= 2:2.12.8
+BuildRequires:	intltool >= 0.37.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	gtk+2 >= 2:2.12.0
+Requires:	gtk+2 >= 2:2.12.8
 Provides:	gnome-themes-Clearlooks
 Provides:	gnome-themes-ThinIce
 Provides:	gtk2-theme-engine-Clearlooks
@@ -24,11 +26,11 @@ Provides:	gtk2-theme-engine-ThinIce
 Obsoletes:	gnome-themes-LighthouseBlue
 Obsoletes:	gnome-themes-LighthouseBlue
 Obsoletes:	gnome-themes-ThinIce
+Obsoletes:	gtk-engines = 1.9.0
 Obsoletes:	gtk2-theme-engine-Industrial
-Obsoletes:	gtk2-theme-engine-lighthouseblue
 Obsoletes:	gtk2-theme-engine-Smooth
 Obsoletes:	gtk2-theme-engine-ThinIce
-Obsoletes:	gtk-engines = 1.9.0
+Obsoletes:	gtk2-theme-engine-lighthouseblue
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -80,4 +82,4 @@ exit 0
 %{_datadir}/themes/Redmond/gtk-2.0
 %{_datadir}/themes/ThinIce
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
-%{_pkgconfigdir}/*
+%{_pkgconfigdir}/gtk-engines-2.pc
