@@ -2,7 +2,7 @@ Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
 Version:	2.14.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
@@ -16,6 +16,7 @@ BuildRequires:	gtk+2-devel >= 2:2.12.8
 BuildRequires:	intltool >= 0.37.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Requires(post):	gtk+2 >= 2:2.12.9-3
 Requires:	gtk+2 >= 2:2.12.8
 Provides:	gnome-themes-Clearlooks
 Provides:	gnome-themes-ThinIce
@@ -32,6 +33,15 @@ Obsoletes:	gtk2-theme-engine-Smooth
 Obsoletes:	gtk2-theme-engine-ThinIce
 Obsoletes:	gtk2-theme-engine-lighthouseblue
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%if "%{_lib}" != "lib"
+%define		libext		%(lib="%{_lib}"; echo ${lib#lib})
+%define		_gtkconfdir	/etc/gtk%{libext}-2.0
+%define		pqext		-%{libext}
+%else
+%define		_gtkconfdir	/etc/gtk-2.0
+%define		pqext		%{nil}
+%endif
 
 %description
 These are the graphical engines for the various GTK+ toolkit themes.
@@ -66,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 umask 022
-%{_bindir}/gdk-pixbuf-query-loaders >%{_sysconfdir}/gtk-2.0/gdk-pixbuf.loaders
+gdk-pixbuf-query-loaders%{pqext} > %{_gtkconfdir}/gdk-pixbuf.loaders
 exit 0
 
 %files -f gtk-engines.lang
