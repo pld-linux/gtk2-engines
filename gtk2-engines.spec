@@ -1,13 +1,13 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.14.1
+Version:	2.14.2
 Release:	1
 Epoch:		1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.14/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	eef8ee067bad0b76b9773aef1994930c
+# Source0-md5:	7953d19486de6fae99922b28113e079b
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -69,8 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 # .la are not needed (according to spec included to package)
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/*/engines/*.la
 
-%find_lang gtk-engines
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -79,7 +77,7 @@ umask 022
 gdk-pixbuf-query-loaders%{pqext} > %{_gtkconfdir}/gdk-pixbuf.loaders
 exit 0
 
-%files -f gtk-engines.lang
+%files
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %dir %{_datadir}/gtk-engines
