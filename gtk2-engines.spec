@@ -1,12 +1,12 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.18.5
+Version:	2.19.0
 Release:	1
 Epoch:		1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.18/gtk-engines-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.19/gtk-engines-%{version}.tar.bz2
 # Source0-md5:	8ab438af9f460b1dacbe37437612c629
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
@@ -16,6 +16,7 @@ BuildRequires:	gtk+2-devel >= 2:2.16.0
 BuildRequires:	intltool >= 0.40.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 Requires(post):	gtk+2 >= 2:2.12.9-3
 Requires:	gtk+2 >= 2:2.16.0
 Provides:	gnome-themes-Clearlooks
@@ -52,6 +53,9 @@ Pakiet ten zawiera moduły różnych motywów do biblioteki GTK+.
 %prep
 %setup -q -n gtk-engines-%{version}
 
+sed -i -e 's/^en@shaw//' po/LINGUAS
+rm -f po/en@shaw.po
+
 %build
 %{__libtoolize}
 %{__aclocal}
@@ -68,8 +72,6 @@ rm -rf $RPM_BUILD_ROOT
 
 # .la are not needed (according to spec included to package)
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/*/engines/*.la
-
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/ca@valencia
 
 %find_lang gtk-engines
 
