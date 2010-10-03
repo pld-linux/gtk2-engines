@@ -1,13 +1,13 @@
 Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Motywy do GTK+2
 Name:		gtk2-engines
-Version:	2.20.1
+Version:	2.20.2
 Release:	1
 Epoch:		1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.20/gtk-engines-%{version}.tar.bz2
-# Source0-md5:	666de7fcdb775cd90dd95e1b20860b5a
+# Source0-md5:	5deb287bc6075dc21812130604c7dc4f
 URL:		http://gtk.themes.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
