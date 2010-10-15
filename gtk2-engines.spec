@@ -2,7 +2,7 @@ Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Moduły motywów do GTK+2
 Name:		gtk2-engines
 Version:	2.20.2
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
@@ -40,7 +40,7 @@ Pakiet ten zawiera moduły różnych motywów do biblioteki GTK+.
 Summary:	Various GTK+ toolkit themes
 Summary(pl.UTF-8):	Różne motywy do biblioteki GTK+
 Group:		Themes/GTK+
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-themes-Clearlooks
 Provides:	gnome-themes-ThinIce
 Provides:	gtk2-theme-engine-Clearlooks
