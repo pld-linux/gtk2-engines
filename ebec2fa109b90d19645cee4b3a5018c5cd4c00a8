@@ -1,0 +1,3 @@
+- fixed %%files (now works with gtk+2.1.1 too)
+- fixed Source0
+- rel. 2
