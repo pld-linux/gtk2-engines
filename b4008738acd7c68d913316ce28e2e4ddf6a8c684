@@ -1,0 +1,2 @@
+- include to package %%{_datadir}/themes/{Metal,Notif,Redmond95},
+- change permission to 755 on lib*.la files.
