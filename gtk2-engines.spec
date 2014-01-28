@@ -9,12 +9,9 @@ Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.20/gtk-engines-%{version}.tar.bz2
 # Source0-md5:	5deb287bc6075dc21812130604c7dc4f
 URL:		http://gtk.themes.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2:2.20.0
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires(post):	gtk+2 >= 2:2.12.9-3
 Requires:	gtk+2 >= 2:2.20.0
@@ -65,10 +62,6 @@ Różne motywy do biblioteki GTK+.
 %setup -q -n gtk-engines-%{version}
 
 %build
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
 %configure \
 	--disable-silent-rules
 %{__make}
