@@ -2,7 +2,7 @@ Summary:	Default GTK+2 theme engines
 Summary(pl.UTF-8):	Moduły motywów do GTK+2
 Name:		gtk2-engines
 Version:	2.20.2
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes/GTK+
@@ -25,6 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_gtkconfdir	/etc/gtk-2.0
 %define		pqext		%{nil}
 %endif
+
+%define		_noautoreq	%{__noauto_regexp_helper -p pkgconfig gtk\+-2.0}
 
 %description
 These are the graphical engines for the various GTK+ toolkit themes.
