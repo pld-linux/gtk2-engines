@@ -9,7 +9,7 @@ Group:		Themes/GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-engines/2.20/gtk-engines-%{version}.tar.bz2
 # Source0-md5:	5deb287bc6075dc21812130604c7dc4f
 URL:		http://gtk.themes.org/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+2-devel >= 2:2.20.0
 BuildRequires:	intltool >= 0.40.0
 BuildRequires:	pkgconfig
