@@ -64,6 +64,7 @@ Różne motywy do biblioteki GTK+.
 %setup -q -n gtk-engines-%{version}
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure \
 	--disable-silent-rules
 %{__make}
